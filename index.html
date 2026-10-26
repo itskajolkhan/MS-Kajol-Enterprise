@@ -1,139 +1,163 @@
+
 <!DOCTYPE html>
 <html lang="bn">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#f85606">
-<title>MS Kajol Enterprise | Online Shopping</title>
+<title>MS Kajol Enterprise</title>
 <style>
 *{box-sizing:border-box}
-body{margin:0;background:#f5f5f5;color:#222;font-family:Arial,"Noto Sans Bengali",sans-serif}
-button,input,textarea{font:inherit}
+body{margin:0;background:#f5f5f5;color:#252525;font-family:Arial,"Noto Sans Bengali",sans-serif;padding-bottom:65px}
+button,input{font:inherit}
 button{cursor:pointer}
-header{background:#f85606;color:white;padding:14px;position:sticky;top:0;z-index:10}
-.top{max-width:1200px;margin:auto;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
-.logo{font-weight:bold;font-size:20px}
-.search{display:flex;flex:1;min-width:170px}
-.search input{width:100%;padding:12px;border:0;border-radius:5px 0 0 5px}
-.search button{border:0;background:#ffe0d1;padding:0 15px;border-radius:0 5px 5px 0}
-.cartbtn{background:white;color:#f85606;padding:12px;border-radius:5px;cursor:pointer;font-weight:bold}
-nav{display:flex;gap:22px;overflow:auto;white-space:nowrap;background:white;padding:14px 5%}
-nav a{color:#333;text-decoration:none;font-size:14px}
-main{max-width:1200px;margin:auto;padding:15px}
-.banner{background:linear-gradient(120deg,#f85606,#ffb347);color:white;padding:30px;border-radius:10px;display:flex;justify-content:space-between;align-items:center;gap:12px}
-.banner h1{font-size:clamp(24px,5vw,38px);margin:0 0 12px}
-.banner p{line-height:1.6}
-.banner .btn{background:white;color:#f85606}
-.btn{background:#f85606;color:white;border:0;padding:10px 14px;border-radius:5px}
-.outline{background:white;color:#f85606;border:1px solid #f85606}
-.heading{display:flex;justify-content:space-between;align-items:center;gap:10px;margin:24px 0 12px}
-.heading h2{font-size:21px;margin:0}
-.categories{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-.cat{background:white;padding:16px 5px;text-align:center;border-radius:8px;cursor:pointer;border:1px solid #eee}
-.cat span{display:block;font-size:28px;margin-bottom:8px}
-.products{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
-.product{background:white;border-radius:8px;overflow:hidden;box-shadow:0 1px 4px #ddd}
-.pic{height:140px;display:grid;place-items:center;background:#fff0e8;font-size:55px}
-.info{padding:12px}
-.info h3{font-size:14px;line-height:1.5;height:42px;overflow:hidden;margin:0 0 8px}
-.price{font-size:19px;color:#f85606;font-weight:bold}
-.old{font-size:12px;color:#888;text-decoration:line-through}
-.discount{font-size:12px;color:#f85606}
-.rating{color:#e99b00;font-size:12px;margin:8px 0}
-.actions{display:flex;gap:5px}
-.actions button{flex:1;font-size:12px;padding:9px 3px}
-.panel{background:white;padding:18px;border-radius:8px;margin-top:20px}
-.field{display:block;width:100%;padding:12px;margin:8px 0 14px;border:1px solid #ddd;border-radius:5px}
-.cartrow{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px 0;border-bottom:1px solid #eee;flex-wrap:wrap}
-.qty{display:flex;align-items:center;gap:8px}
-.qty button{padding:5px 10px;border:1px solid #ddd;background:white;border-radius:4px}
-.empty{text-align:center;padding:20px;color:#777}
-footer{text-align:center;padding:25px;background:#222;color:white;margin-top:30px}
-.small{font-size:12px;color:#777;line-height:1.6}
-@media(max-width:700px){
- .products{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
- .categories{grid-template-columns:repeat(2,1fr)}
- .pic{height:115px}
- main{padding:10px}
- .banner{padding:20px}
- .logo{font-size:17px}
- .info{padding:9px}
+a{text-decoration:none;color:inherit}
+.top{background:white;padding:12px max(12px,calc((100% - 1200px)/2));display:flex;gap:10px;align-items:center}
+.logo{font-size:19px;font-weight:800;color:#f85606;white-space:nowrap}
+.search{display:flex;flex:1;border:2px solid #f85606;border-radius:7px;overflow:hidden}
+.search input{width:100%;min-width:0;border:0;padding:12px;outline:none}
+.search button{border:0;background:#f85606;color:white;padding:0 16px}
+.carttop{font-size:23px;padding:7px}
+.service{background:#444;color:white;display:flex;justify-content:center;gap:22px;padding:12px 5px;font-size:12px;white-space:nowrap}
+.service span+span{border-left:1px solid #bbb;padding-left:20px}
+main{max-width:1200px;margin:auto;padding:12px}
+.shortcuts{display:flex;gap:13px;overflow-x:auto;padding:10px 2px 18px;scrollbar-width:none}
+.short{min-width:82px;text-align:center;font-size:12px}
+.short .ico{height:64px;width:64px;border-radius:14px;background:#ffe4c8;display:grid;place-items:center;font-size:30px;margin:0 auto 7px}
+.short:first-child .ico{background:#ff5b12;color:white}
+.voucher{background:linear-gradient(100deg,#fff1f1,#fff);border:2px solid #f5a3b8;border-radius:9px;padding:13px;margin:8px 0 18px}
+.voucher strong{font-size:17px}
+.voucherrow{display:flex;justify-content:space-between;gap:8px;align-items:center;margin-top:12px}
+.voucherrow div{color:#e65378;font-size:13px}
+.voucherrow b{display:block;font-size:20px}
+.collect{background:#f85691;color:white;border:0;padding:10px;border-radius:5px}
+.hero{height:175px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px;border-radius:8px;background:linear-gradient(110deg,#ffdf52,#ff9e19);overflow:hidden}
+.hero h1{font-size:25px;margin:0 0 10px}
+.hero p{font-size:13px}
+.hero button{background:#f85606;color:white;border:0;border-radius:5px;padding:10px}
+.hero .art{font-size:70px}
+.section{margin-top:24px}
+.sectionhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.sectionhead h2{font-size:21px;margin:0}
+.sectionhead a{font-size:13px;color:#555}
+.deals{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.card{background:white;border-radius:8px;overflow:hidden;min-width:0}
+.pic{height:135px;background:#fff0e8;display:grid;place-items:center;font-size:54px;overflow:hidden}
+.pic img{width:100%;height:100%;object-fit:cover}
+.details{padding:9px}
+.name{font-size:13px;line-height:1.4;height:37px;overflow:hidden}
+.price{color:#f85606;font-weight:bold;font-size:18px;margin-top:7px}
+.old{font-size:11px;color:#888;text-decoration:line-through}
+.discount{float:right;background:#ffe5dc;padding:4px;font-size:11px}
+.add{width:100%;background:#f85606;color:white;border:0;padding:9px 3px;border-radius:4px;margin-top:9px;font-size:12px}
+.daily{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.categories{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.category{background:white;text-align:center;border-radius:8px;padding:14px 3px;font-size:12px}
+.category span{display:block;font-size:30px;margin-bottom:7px}
+.cartbox{background:white;padding:15px;border-radius:8px;margin-top:24px}
+.cartrow{padding:10px 0;border-bottom:1px solid #eee;font-size:13px;display:flex;justify-content:space-between;gap:10px}
+.cartrow button{background:white;border:1px solid #ddd;padding:4px 9px}
+.field{display:block;width:100%;padding:12px;border:1px solid #ddd;border-radius:5px;margin:8px 0 13px}
+.bottom{position:fixed;bottom:0;left:0;right:0;background:white;border-top:1px solid #ddd;display:flex;justify-content:space-around;padding:9px 2px calc(8px + env(safe-area-inset-bottom));z-index:10}
+.bottom a{text-align:center;font-size:11px;color:#666}
+.bottom span{display:block;font-size:21px;margin-bottom:3px}
+footer{text-align:center;background:#333;color:white;padding:24px;margin-top:25px;font-size:13px}
+@media(min-width:700px){
+ .shortcuts{justify-content:space-around}
+ .hero{height:220px}
+ .hero h1{font-size:34px}
+ .pic{height:190px}
+ .deals,.daily{grid-template-columns:repeat(5,minmax(0,1fr))}
 }
 </style>
 </head>
 <body>
-
 <header>
  <div class="top">
-  <div class="logo">MS KAJOL ENTERPRISE</div>
+  <div class="logo">MS KAJOL<br>ENTERPRISE</div>
   <div class="search">
-   <input id="search" placeholder="পণ্য খুঁজুন..." oninput="renderProducts()">
-   <button onclick="renderProducts()">🔍</button>
+   <input id="q" placeholder="পণ্য খুঁজুন..." oninput="render()">
+   <button onclick="document.getElementById('products').scrollIntoView()">Search</button>
   </div>
-  <div class="cartbtn" onclick="goTo('cart')">🛒 <span id="count">0</span></div>
+  <a class="carttop" href="#cart">🛒<sup id="count">0</sup></a>
+ </div>
+ <div class="service">
+  <span>▣ Safe Payment</span>
+  <span>🚚 Fast Delivery</span>
+  <span>↩ Free Return</span>
  </div>
 </header>
 
-<nav>
- <a href="#home">হোম</a>
- <a href="#categories">ক্যাটাগরি</a>
- <a href="#products">সব পণ্য</a>
- <a href="#cart">কার্ট</a>
- <a href="#checkout">অর্ডার</a>
-</nav>
-
 <main id="home">
- <section class="banner">
-  <div>
-   <h1>আপনার বিশ্বস্ত অনলাইন শপ</h1>
-   <p>আপনার প্রয়োজনীয় পণ্য কিনুন সহজেই।</p>
-   <button class="btn" onclick="goTo('products')">কেনাকাটা শুরু করুন</button>
+ <div class="shortcuts">
+  <div class="short"><div class="ico">🏷️</div>বিশেষ অফার</div>
+  <div class="short"><div class="ico">💰</div>কম দাম</div>
+  <div class="short"><div class="ico">💡</div>ইলেকট্রিক</div>
+  <div class="short"><div class="ico">📱</div>মোবাইল</div>
+  <div class="short"><div class="ico">🎁</div>সেরা ডিল</div>
+  <div class="short"><div class="ico">🏠</div>হোম আইটেম</div>
+ </div>
+
+ <section class="voucher">
+  <strong>Welcome to MS Kajol Enterprise!</strong>
+  <div class="voucherrow">
+   <div><b>বিশেষ অফার</b>সাশ্রয়ী দামে পণ্য</div>
+   <div><b>নতুন পণ্য</b>দেখুন আমাদের কালেকশন</div>
+   <button class="collect" onclick="document.getElementById('products').scrollIntoView()">Shop Now</button>
   </div>
-  <div style="font-size:60px">🛍️</div>
  </section>
 
- <div class="heading" id="categories">
-  <h2>ক্যাটাগরি</h2>
- </div>
-
- <section class="categories">
-  <div class="cat" onclick="chooseCategory('ইলেকট্রিক')"><span>💡</span>ইলেকট্রিক</div>
-  <div class="cat" onclick="chooseCategory('মোবাইল')"><span>📱</span>মোবাইল এক্সেসরিজ</div>
-  <div class="cat" onclick="chooseCategory('হোম')"><span>🏠</span>হোম আইটেম</div>
-  <div class="cat" onclick="chooseCategory('অন্যান্য')"><span>📦</span>অন্যান্য পণ্য</div>
+ <section class="hero">
+  <div>
+   <h1>PAYDAY SALE</h1>
+   <p>আপনার প্রয়োজনীয় পণ্য কিনুন সহজেই</p>
+   <button onclick="document.getElementById('products').scrollIntoView()">Shop Now ›</button>
+  </div>
+  <div class="art">🛍️🎁</div>
  </section>
 
- <div class="heading" id="products">
-  <h2 id="productTitle">জনপ্রিয় পণ্য</h2>
-  <button class="btn outline" onclick="clearFilters()">সব পণ্য</button>
- </div>
+ <section class="section">
+  <div class="sectionhead"><h2>⚡ Flash Sale</h2><a href="#products">Shop More ›</a></div>
+  <div class="deals" id="flash"></div>
+ </section>
 
- <section class="products" id="grid"></section>
+ <section class="section">
+  <div class="sectionhead"><h2>Daily Shera Deals</h2><a href="#products">Shop Now ›</a></div>
+  <div class="daily" id="daily"></div>
+ </section>
 
- <section class="panel" id="cart">
-  <h2>🛒 আপনার কার্ট</h2>
-  <div id="cartItems"></div>
+ <section class="section" id="categories">
+  <div class="sectionhead"><h2>ক্যাটাগরি</h2></div>
+  <div class="categories">
+   <a class="category" href="#products" onclick="setcat('ইলেকট্রিক')"><span>💡</span>ইলেকট্রিক</a>
+   <a class="category" href="#products" onclick="setcat('মোবাইল')"><span>📱</span>মোবাইল এক্সেসরিজ</a>
+   <a class="category" href="#products" onclick="setcat('হোম')"><span>🏠</span>হোম আইটেম</a>
+   <a class="category" href="#products" onclick="setcat('অন্যান্য')"><span>📦</span>অন্যান্য</a>
+  </div>
+ </section>
+
+ <section class="section" id="products">
+  <div class="sectionhead"><h2 id="heading">Just For You</h2><a href="#home" onclick="reset()">Back to top ↑</a></div>
+  <div class="deals" id="all"></div>
+ </section>
+
+ <section class="cartbox" id="cart">
+  <h2>🛒 Shopping Cart</h2>
+  <div id="items">আপনার কার্ট খালি।</div>
   <h3>মোট: ৳<span id="total">0</span></h3>
-  <button class="btn" onclick="goTo('checkout')">অর্ডার করতে এগিয়ে যান</button>
+  <a class="collect" href="#checkout">Checkout</a>
  </section>
 
- <section class="panel" id="checkout">
-  <h2>অর্ডার ফর্ম</h2>
-  <p>আপনার নাম, ফোন নম্বর ও ডেলিভারি ঠিকানা দিন।</p>
-  <form onsubmit="placeOrder(event)">
-   <label for="customer">আপনার নাম</label>
-   <input class="field" id="customer" required placeholder="আপনার সম্পূর্ণ নাম">
-
-   <label for="phone">মোবাইল নম্বর</label>
-   <input class="field" id="phone" type="tel" required placeholder="01XXXXXXXXX">
-
-   <label for="address">ডেলিভারি ঠিকানা</label>
-   <textarea class="field" id="address" required placeholder="গ্রাম/এলাকা, উপজেলা, জেলা" rows="3"></textarea>
-
-   <button class="btn" type="submit">WhatsApp-এ অর্ডার পাঠান</button>
+ <section class="cartbox" id="checkout">
+  <h2>অর্ডার দিন</h2>
+  <p>আপনার তথ্য পূরণ করুন।</p>
+  <form onsubmit="order(event)">
+   <label>নাম</label><input class="field" id="customer" required>
+   <label>মোবাইল নম্বর</label><input class="field" id="phone" type="tel" required>
+   <label>সম্পূর্ণ ঠিকানা</label><input class="field" id="address" required>
+   <button class="collect" type="submit">WhatsApp-এ অর্ডার</button>
   </form>
-  <p id="orderMessage" aria-live="polite"></p>
-  <p class="small">অর্ডার পাঠাতে দোকানের WhatsApp নম্বর কোডে সেট করতে হবে।</p>
+  <p id="message"></p>
  </section>
 </main>
 
@@ -143,182 +167,92 @@ footer{text-align:center;padding:25px;background:#222;color:white;margin-top:30p
  <p>© 2026 MS Kajol Enterprise</p>
 </footer>
 
+<nav class="bottom">
+ <a href="#home"><span>⌂</span>For You</a>
+ <a href="#categories"><span>▦</span>Categories</a>
+ <a href="#products"><span>♡</span>Discover</a>
+ <a href="#cart"><span>🛒</span>Cart</a>
+ <a href="#checkout"><span>♙</span>Account</a>
+</nav>
+
 <script>
-const products = [
- {id:1,name:"LED লাইট",category:"ইলেকট্রিক",price:150,old:200,icon:"💡"},
- {id:2,name:"ইলেকট্রিক মাল্টিপ্লাগ",category:"ইলেকট্রিক",price:250,old:300,icon:"🔌"},
- {id:3,name:"LED বাল্ব",category:"ইলেকট্রিক",price:100,old:130,icon:"🔆"},
- {id:4,name:"মোবাইল চার্জার",category:"মোবাইল",price:350,old:450,icon:"🔋"},
- {id:5,name:"USB ডাটা কেবল",category:"মোবাইল",price:120,old:180,icon:"🔗"},
- {id:6,name:"মোবাইল হেডফোন",category:"মোবাইল",price:250,old:350,icon:"🎧"},
- {id:7,name:"দেয়াল ঘড়ি",category:"হোম",price:450,old:550,icon:"🕒"},
- {id:8,name:"পানির বোতল",category:"হোম",price:180,old:220,icon:"🧴"},
- {id:9,name:"টর্চ লাইট",category:"ইলেকট্রিক",price:220,old:280,icon:"🔦"},
- {id:10,name:"ছোট ফ্যান",category:"হোম",price:650,old:800,icon:"🪭"},
- {id:11,name:"স্ক্রু ড্রাইভার সেট",category:"অন্যান্য",price:200,old:260,icon:"🪛"},
- {id:12,name:"অন্যান্য প্রয়োজনীয় পণ্য",category:"অন্যান্য",price:100,old:150,icon:"📦"}
+const products=[
+ {id:1,n:"LED বাল্ব",c:"ইলেকট্রিক",p:150,o:200,e:"💡"},
+ {id:2,n:"ইলেকট্রিক মাল্টিপ্লাগ",c:"ইলেকট্রিক",p:250,o:320,e:"🔌"},
+ {id:3,n:"LED লাইট",c:"ইলেকট্রিক",p:100,o:140,e:"🔆"},
+ {id:4,n:"মোবাইল চার্জার",c:"মোবাইল",p:350,o:450,e:"🔋"},
+ {id:5,n:"USB ডাটা কেবল",c:"মোবাইল",p:120,o:180,e:"🔗"},
+ {id:6,n:"হেডফোন",c:"মোবাইল",p:250,o:350,e:"🎧"},
+ {id:7,n:"দেয়াল ঘড়ি",c:"হোম",p:450,o:550,e:"🕒"},
+ {id:8,n:"পানির বোতল",c:"হোম",p:180,o:220,e:"🧴"},
+ {id:9,n:"টর্চ লাইট",c:"ইলেকট্রিক",p:220,o:280,e:"🔦"},
+ {id:10,n:"ছোট ফ্যান",c:"হোম",p:650,o:800,e:"🪭"},
+ {id:11,n:"স্ক্রু ড্রাইভার সেট",c:"অন্যান্য",p:200,o:260,e:"🪛"},
+ {id:12,n:"এক্সটেনশন বোর্ড",c:"ইলেকট্রিক",p:400,o:500,e:"🔌"},
+ {id:13,n:"মোবাইল স্ট্যান্ড",c:"মোবাইল",p:100,o:150,e:"📱"},
+ {id:14,n:"স্টোরেজ বক্স",c:"হোম",p:300,o:400,e:"📦"},
+ {id:15,n:"অন্যান্য প্রয়োজনীয় পণ্য",c:"অন্যান্য",p:100,o:150,e:"🎁"}
 ];
-
-let cart = {};
-let categoryFilter = "";
-
-function goTo(id){
- document.getElementById(id).scrollIntoView({behavior:"smooth"});
+let cart={},category="";
+function card(p){
+ return `<article class="card">
+  <div class="pic">${p.e}</div>
+  <div class="details">
+   <div class="name">${p.n}</div>
+   <div class="price">৳${p.p}<span class="old"> ৳${p.o}</span></div>
+   <div class="discount">-${Math.round((p.o-p.p)*100/p.o)}%</div>
+   <button class="add" onclick="add(${p.id})">Add to Cart</button>
+  </div>
+ </article>`;
 }
-
-function renderProducts(){
- const q = document.getElementById("search").value.trim().toLowerCase();
-
- const filtered = products.filter(p =>
-  (!categoryFilter || p.category === categoryFilter) &&
-  p.name.toLowerCase().includes(q)
- );
-
- document.getElementById("grid").innerHTML = filtered.length
- ? filtered.map(p => `
-  <article class="product">
-   <div class="pic">${p.icon}</div>
-   <div class="info">
-    <h3>${p.name}</h3>
-    <div>
-     <span class="price">৳${p.price}</span>
-     <span class="old">৳${p.old}</span>
-    </div>
-    <div class="rating">★★★★★ <span style="color:#777">নমুনা</span></div>
-    <div class="actions">
-     <button class="btn" onclick="addCart(${p.id})">কার্টে যোগ</button>
-     <button class="btn outline" onclick="buyNow(${p.id})">কিনুন</button>
-    </div>
-   </div>
-  </article>
- `).join("")
- : '<p class="empty">কোনো পণ্য পাওয়া যায়নি।</p>';
-
- document.getElementById("productTitle").textContent =
-  categoryFilter ? categoryFilter + " পণ্য" : "জনপ্রিয় পণ্য";
+function render(){
+ let q=document.getElementById("q").value.trim().toLowerCase();
+ let list=products.filter(p=>(!category||p.c===category)&&p.n.toLowerCase().includes(q));
+ document.getElementById("all").innerHTML=list.map(card).join("")||"<p>কোনো পণ্য পাওয়া যায়নি।</p>";
+ document.getElementById("heading").textContent=category||q?"Search Results":"Just For You";
 }
-
-function chooseCategory(category){
- categoryFilter = category;
- document.getElementById("search").value = "";
- renderProducts();
- goTo("products");
+function setcat(c){
+ category=c;
+ document.getElementById("q").value="";
+ render();
 }
-
-function clearFilters(){
- categoryFilter = "";
- document.getElementById("search").value = "";
- renderProducts();
-}
-
-function addCart(id){
- cart[id] = (cart[id] || 0) + 1;
- renderCart();
-}
-
-function buyNow(id){
- addCart(id);
- goTo("checkout");
-}
-
-function changeQty(id,amount){
- cart[id] = (cart[id] || 0) + amount;
- if(cart[id] <= 0) delete cart[id];
- renderCart();
-}
-
-function removeItem(id){
- delete cart[id];
- renderCart();
-}
-
+function reset(){category="";document.getElementById("q").value="";render();}
+function add(id){cart[id]=(cart[id]||0)+1;renderCart();}
+function qty(id,n){cart[id]=(cart[id]||0)+n;if(cart[id]<=0)delete cart[id];renderCart();}
+function removeItem(id){delete cart[id];renderCart();}
 function renderCart(){
- const ids = Object.keys(cart);
- let total = 0;
- let count = 0;
-
- if(ids.length){
-  document.getElementById("cartItems").innerHTML = ids.map(id => {
-   const p = products.find(x => x.id === Number(id));
-   const qty = cart[id];
-   total += p.price * qty;
-   count += qty;
-
-   return `
-    <div class="cartrow">
-     <div>
-      <b>${p.icon} ${p.name}</b><br>
-      ৳${p.price} × ${qty} = ৳${p.price * qty}
-     </div>
-     <div class="qty">
-      <button onclick="changeQty(${p.id},-1)">−</button>
-      <span>${qty}</span>
-      <button onclick="changeQty(${p.id},1)">+</button>
-      <button onclick="removeItem(${p.id})">🗑️</button>
-     </div>
-    </div>
-   `;
-  }).join("");
- }else{
-  document.getElementById("cartItems").innerHTML =
-   '<p class="empty">আপনার কার্ট খালি। পছন্দের পণ্য যোগ করুন।</p>';
+ let total=0,count=0,html="";
+ for(let id in cart){
+  let p=products.find(x=>x.id==id),n=cart[id];
+  total+=p.p*n;count+=n;
+  html+=`<div class="cartrow"><div>${p.e} ${p.n}<br>৳${p.p} × ${n}</div>
+  <div><button onclick="qty(${id},-1)">−</button> ${n} <button onclick="qty(${id},1)">+</button> <button onclick="removeItem(${id})">🗑</button></div></div>`;
  }
-
- document.getElementById("total").textContent = total;
- document.getElementById("count").textContent = count;
+ document.getElementById("items").innerHTML=html||"আপনার কার্ট খালি।";
+ document.getElementById("total").textContent=total;
+ document.getElementById("count").textContent=count;
 }
-
-function placeOrder(event){
- event.preventDefault();
-
- const ids = Object.keys(cart);
- if(!ids.length){
-  alert("প্রথমে কার্টে অন্তত একটি পণ্য যোগ করুন।");
-  goTo("products");
-  return;
+function order(e){
+ e.preventDefault();
+ if(!Object.keys(cart).length){alert("আগে কার্টে পণ্য যোগ করুন।");return;}
+ let name=document.getElementById("customer").value;
+ let phone=document.getElementById("phone").value;
+ let address=document.getElementById("address").value;
+ let list=Object.keys(cart).map(id=>{
+  let p=products.find(x=>x.id==id);return p.n+" x "+cart[id]+" = ৳"+p.p*cart[id];
+ }).join("\n");
+ let total=Object.keys(cart).reduce((s,id)=>s+products.find(x=>x.id==id).p*cart[id],0);
+ let msg="MS Kajol Enterprise Order\nName: "+name+"\nPhone: "+phone+"\nAddress: "+address+"\n\n"+list+"\nTotal: ৳"+total;
+ const whatsapp="8801XXXXXXXXX";
+ if(whatsapp.includes("X")){
+  document.getElementById("message").textContent="WhatsApp অর্ডার চালু করতে কোডে দোকানের আসল WhatsApp নম্বর বসাতে হবে।";
+  alert(msg);return;
  }
-
- const name = document.getElementById("customer").value.trim();
- const phone = document.getElementById("phone").value.trim();
- const address = document.getElementById("address").value.trim();
-
- let total = 0;
- const lines = ids.map(id => {
-  const p = products.find(x => x.id === Number(id));
-  const subtotal = p.price * cart[id];
-  total += subtotal;
-  return p.name + " × " + cart[id] + " = ৳" + subtotal;
- });
-
- const message =
-  "নতুন অর্ডার - MS Kajol Enterprise\n\n" +
-  "নাম: " + name + "\n" +
-  "ফোন: " + phone + "\n" +
-  "ঠিকানা: " + address + "\n\n" +
-  "পণ্য:\n" + lines.join("\n") +
-  "\n\nমোট: ৳" + total;
-
- /*
-  দোকানের আসল WhatsApp নম্বর বসাবে।
-  উদাহরণ: বাংলাদেশের 017XXXXXXXX নম্বরের
-  আন্তর্জাতিক রূপ হবে 88017XXXXXXXX।
- */
- const shopWhatsApp = "8801XXXXXXXXX";
-
- if(shopWhatsApp.includes("X")){
-  document.getElementById("orderMessage").textContent =
-   "ফর্ম কাজ করছে, কিন্তু অর্ডার পাঠানোর আগে কোডে দোকানের আসল WhatsApp নম্বর বসাতে হবে।";
-  alert(message);
-  return;
- }
-
- const url = "https://wa.me/" + shopWhatsApp +
-  "?text=" + encodeURIComponent(message);
-
- window.open(url,"_blank");
+ window.open("https://wa.me/"+whatsapp+"?text="+encodeURIComponent(msg),"_blank");
 }
-
-renderProducts();
+document.getElementById("flash").innerHTML=products.slice(0,3).map(card).join("");
+document.getElementById("daily").innerHTML=products.slice(3,9).map(card).join("");
+render();
 renderCart();
 </script>
 </body>
