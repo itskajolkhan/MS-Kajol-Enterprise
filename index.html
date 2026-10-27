@@ -1,259 +1,58 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="bn">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#f85606">
-<title>MS Kajol Enterprise</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MS Kajol Enterprise — Quality Products, Better Life</title>
 <style>
-*{box-sizing:border-box}
-body{margin:0;background:#f5f5f5;color:#252525;font-family:Arial,"Noto Sans Bengali",sans-serif;padding-bottom:65px}
-button,input{font:inherit}
-button{cursor:pointer}
-a{text-decoration:none;color:inherit}
-.top{background:white;padding:12px max(12px,calc((100% - 1200px)/2));display:flex;gap:10px;align-items:center}
-.logo{font-size:19px;font-weight:800;color:#f85606;white-space:nowrap}
-.search{display:flex;flex:1;border:2px solid #f85606;border-radius:7px;overflow:hidden}
-.search input{width:100%;min-width:0;border:0;padding:12px;outline:none}
-.search button{border:0;background:#f85606;color:white;padding:0 16px}
-.carttop{font-size:23px;padding:7px}
-.service{background:#444;color:white;display:flex;justify-content:center;gap:22px;padding:12px 5px;font-size:12px;white-space:nowrap}
-.service span+span{border-left:1px solid #bbb;padding-left:20px}
-main{max-width:1200px;margin:auto;padding:12px}
-.shortcuts{display:flex;gap:13px;overflow-x:auto;padding:10px 2px 18px;scrollbar-width:none}
-.short{min-width:82px;text-align:center;font-size:12px}
-.short .ico{height:64px;width:64px;border-radius:14px;background:#ffe4c8;display:grid;place-items:center;font-size:30px;margin:0 auto 7px}
-.short:first-child .ico{background:#ff5b12;color:white}
-.voucher{background:linear-gradient(100deg,#fff1f1,#fff);border:2px solid #f5a3b8;border-radius:9px;padding:13px;margin:8px 0 18px}
-.voucher strong{font-size:17px}
-.voucherrow{display:flex;justify-content:space-between;gap:8px;align-items:center;margin-top:12px}
-.voucherrow div{color:#e65378;font-size:13px}
-.voucherrow b{display:block;font-size:20px}
-.collect{background:#f85691;color:white;border:0;padding:10px;border-radius:5px}
-.hero{height:175px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px;border-radius:8px;background:linear-gradient(110deg,#ffdf52,#ff9e19);overflow:hidden}
-.hero h1{font-size:25px;margin:0 0 10px}
-.hero p{font-size:13px}
-.hero button{background:#f85606;color:white;border:0;border-radius:5px;padding:10px}
-.hero .art{font-size:70px}
-.section{margin-top:24px}
-.sectionhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
-.sectionhead h2{font-size:21px;margin:0}
-.sectionhead a{font-size:13px;color:#555}
-.deals{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
-.card{background:white;border-radius:8px;overflow:hidden;min-width:0}
-.pic{height:135px;background:#fff0e8;display:grid;place-items:center;font-size:54px;overflow:hidden}
-.pic img{width:100%;height:100%;object-fit:cover}
-.details{padding:9px}
-.name{font-size:13px;line-height:1.4;height:37px;overflow:hidden}
-.price{color:#f85606;font-weight:bold;font-size:18px;margin-top:7px}
-.old{font-size:11px;color:#888;text-decoration:line-through}
-.discount{float:right;background:#ffe5dc;padding:4px;font-size:11px}
-.add{width:100%;background:#f85606;color:white;border:0;padding:9px 3px;border-radius:4px;margin-top:9px;font-size:12px}
-.daily{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
-.categories{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
-.category{background:white;text-align:center;border-radius:8px;padding:14px 3px;font-size:12px}
-.category span{display:block;font-size:30px;margin-bottom:7px}
-.cartbox{background:white;padding:15px;border-radius:8px;margin-top:24px}
-.cartrow{padding:10px 0;border-bottom:1px solid #eee;font-size:13px;display:flex;justify-content:space-between;gap:10px}
-.cartrow button{background:white;border:1px solid #ddd;padding:4px 9px}
-.field{display:block;width:100%;padding:12px;border:1px solid #ddd;border-radius:5px;margin:8px 0 13px}
-.bottom{position:fixed;bottom:0;left:0;right:0;background:white;border-top:1px solid #ddd;display:flex;justify-content:space-around;padding:9px 2px calc(8px + env(safe-area-inset-bottom));z-index:10}
-.bottom a{text-align:center;font-size:11px;color:#666}
-.bottom span{display:block;font-size:21px;margin-bottom:3px}
-footer{text-align:center;background:#333;color:white;padding:24px;margin-top:25px;font-size:13px}
-@media(min-width:700px){
- .shortcuts{justify-content:space-around}
- .hero{height:220px}
- .hero h1{font-size:34px}
- .pic{height:190px}
- .deals,.daily{grid-template-columns:repeat(5,minmax(0,1fr))}
-}
+:root{--navy:#101c2b;--gold:#ffc83d;--line:#e7e9ed;--muted:#69717d;--bg:#f7f8fa}
+*{box-sizing:border-box}body{margin:0;background:#fff;color:#141a22;font:15px Arial,"Noto Sans Bengali",sans-serif}
+button,input{font:inherit}button{cursor:pointer}.top{height:88px;background:var(--navy);color:#fff;display:flex;align-items:center;gap:24px;padding:14px 3%;position:sticky;top:0;z-index:5}
+.brand{display:flex;align-items:center;gap:12px;min-width:310px}.logo{font-size:34px;font-weight:900;color:var(--gold);letter-spacing:-5px;margin-right:5px}.brand strong{font-size:20px;display:block}.brand small{color:#c8d0d9;display:block;margin-top:5px}.search{flex:1;max-width:570px;position:relative}.search input{width:100%;border:0;border-radius:28px;padding:16px 22px 16px 52px;background:#fff;color:#222;outline:none}.search:before{content:"⌕";position:absolute;left:20px;top:8px;color:#45505c;font-size:28px}.topicons{display:flex;gap:24px;align-items:center;font-size:27px}.topicons button{background:none;border:0;color:white;position:relative}.count{position:absolute;right:-7px;top:-7px;background:var(--gold);color:#111;border-radius:50%;font-size:11px;min-width:19px;height:19px;display:grid;place-items:center}
+.layout{display:grid;grid-template-columns:230px minmax(0,1fr);gap:22px;padding:22px 20px 0}.sidebar{border:1px solid var(--line);border-radius:16px;overflow:hidden;min-height:860px}.cat{display:flex;align-items:center;gap:14px;padding:13px 17px;border:0;background:white;width:100%;text-align:left;font-size:14px;color:#303640}.cat span:first-child{font-size:20px;width:25px;text-align:center}.cat.active{background:#fff2ce;font-weight:700}.cat:hover{background:#fff7e4}.cat .arrow{margin-left:auto;color:#8b929a}.content{min-width:0}.quickcats{display:flex;gap:18px;overflow-x:auto;padding:4px 2px 28px;scrollbar-width:thin}.quick{border:0;background:white;min-width:92px;text-align:center;color:#171c23}.quick .pic{width:90px;height:90px;border:1px solid #edf0f3;border-radius:25px;background:#f6f7f9;display:grid;place-items:center;font-size:46px;margin:auto auto 9px}.quick strong{font-size:14px;font-weight:600}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.product{border:1px solid var(--line);border-radius:17px;overflow:hidden;position:relative;background:white;min-width:0}.product-img{height:180px;background:linear-gradient(145deg,#f7f8fa,#eef1f4);display:grid;place-items:center;font-size:82px;position:relative}.heart{position:absolute;right:9px;top:9px;border:0;background:#fff;border-radius:50%;width:29px;height:29px;font-size:17px}.pbody{padding:12px 11px 14px}.pname{font-size:13px;line-height:1.4;min-height:35px}.sub{color:var(--muted);font-size:12px;margin-top:3px;min-height:17px}.price-row{display:flex;align-items:center;justify-content:space-between;gap:5px;margin-top:17px}.price{font-size:16px;font-weight:700}.add{border:0;border-radius:9px;background:var(--gold);height:34px;width:36px;font-size:19px}.section-title{display:flex;align-items:center;justify-content:space-between;margin:38px 0 16px;font-size:21px}.section-title button{border:0;background:white;font-size:14px}.recent{display:flex;gap:14px;overflow:auto;padding-bottom:16px}.recent-card{min-width:120px;height:110px;border:1px solid var(--line);border-radius:14px;background:#fafbfc;display:grid;place-items:center;font-size:45px}.bottomnav{display:none}.notice{margin:15px 20px;color:#7a5a00;background:#fff7df;padding:10px 13px;border-radius:9px;font-size:12px}
+@media(max-width:900px){.top{height:auto;min-height:76px;gap:12px;padding:12px 14px;flex-wrap:wrap}.brand{min-width:0;flex:1}.brand strong{font-size:15px}.brand small{font-size:11px}.logo{font-size:27px}.search{order:3;max-width:none;flex-basis:100%}.topicons{gap:13px;font-size:23px}.layout{grid-template-columns:1fr;padding:12px 12px 80px}.sidebar{display:none}.quickcats{gap:13px;padding-bottom:18px}.quick{min-width:78px}.quick .pic{width:72px;height:72px;font-size:36px;border-radius:20px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.product-img{height:150px;font-size:67px}.pbody{padding:10px}.price{font-size:14px}.section-title{font-size:18px;margin-top:27px}.bottomnav{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:6;background:#fff;border-top:1px solid var(--line);justify-content:space-around;padding:9px 3px calc(9px + env(safe-area-inset-bottom));box-shadow:0 -3px 14px #00000008}.bottomnav button{border:0;background:none;color:#69717d;font-size:11px;display:flex;flex-direction:column;align-items:center;gap:4px}.bottomnav b{font-size:22px;font-weight:400}.bottomnav .sel{color:#d69b00}.notice{margin:0 12px 12px}}
+@media(min-width:901px) and (max-width:1150px){.layout{grid-template-columns:200px minmax(0,1fr);gap:15px;padding:16px}.grid{gap:10px}.product-img{height:150px}.brand{min-width:260px}.top{gap:15px}.topicons{gap:15px}}
 </style>
 </head>
 <body>
-<header>
- <div class="top">
-  <div class="logo">MS KAJOL<br>ENTERPRISE</div>
-  <div class="search">
-   <input id="q" placeholder="পণ্য খুঁজুন..." oninput="render()">
-   <button onclick="document.getElementById('products').scrollIntoView()">Search</button>
-  </div>
-  <a class="carttop" href="#cart">🛒<sup id="count">0</sup></a>
- </div>
- <div class="service">
-  <span>▣ Safe Payment</span>
-  <span>🚚 Fast Delivery</span>
-  <span>↩ Free Return</span>
- </div>
+<header class="top">
+ <div class="brand"><div class="logo">MK</div><div><strong>MS KAJOL ENTERPRISE</strong><small>Quality Products • Better Life</small></div></div>
+ <div class="search"><input id="search" placeholder="পণ্য খুঁজুন..." aria-label="Search products"></div>
+ <div class="topicons"><button title="Account" onclick="alert('Account setup will be connected in the next setup step.')">♙</button><button title="Wishlist" onclick="alert('Your wishlist is ready for account integration.')">♡<span class="count">0</span></button><button title="Cart" onclick="showCart()">🛒<span class="count" id="cartCount">0</span></button></div>
 </header>
-
-<main id="home">
- <div class="shortcuts">
-  <div class="short"><div class="ico">🏷️</div>বিশেষ অফার</div>
-  <div class="short"><div class="ico">💰</div>কম দাম</div>
-  <div class="short"><div class="ico">💡</div>ইলেকট্রিক</div>
-  <div class="short"><div class="ico">📱</div>মোবাইল</div>
-  <div class="short"><div class="ico">🎁</div>সেরা ডিল</div>
-  <div class="short"><div class="ico">🏠</div>হোম আইটেম</div>
- </div>
-
- <section class="voucher">
-  <strong>Welcome to MS Kajol Enterprise!</strong>
-  <div class="voucherrow">
-   <div><b>বিশেষ অফার</b>সাশ্রয়ী দামে পণ্য</div>
-   <div><b>নতুন পণ্য</b>দেখুন আমাদের কালেকশন</div>
-   <button class="collect" onclick="document.getElementById('products').scrollIntoView()">Shop Now</button>
-  </div>
- </section>
-
- <section class="hero">
-  <div>
-   <h1>PAYDAY SALE</h1>
-   <p>আপনার প্রয়োজনীয় পণ্য কিনুন সহজেই</p>
-   <button onclick="document.getElementById('products').scrollIntoView()">Shop Now ›</button>
-  </div>
-  <div class="art">🛍️🎁</div>
- </section>
-
- <section class="section">
-  <div class="sectionhead"><h2>⚡ Flash Sale</h2><a href="#products">Shop More ›</a></div>
-  <div class="deals" id="flash"></div>
- </section>
-
- <section class="section">
-  <div class="sectionhead"><h2>Daily Shera Deals</h2><a href="#products">Shop Now ›</a></div>
-  <div class="daily" id="daily"></div>
- </section>
-
- <section class="section" id="categories">
-  <div class="sectionhead"><h2>ক্যাটাগরি</h2></div>
-  <div class="categories">
-   <a class="category" href="#products" onclick="setcat('ইলেকট্রিক')"><span>💡</span>ইলেকট্রিক</a>
-   <a class="category" href="#products" onclick="setcat('মোবাইল')"><span>📱</span>মোবাইল এক্সেসরিজ</a>
-   <a class="category" href="#products" onclick="setcat('হোম')"><span>🏠</span>হোম আইটেম</a>
-   <a class="category" href="#products" onclick="setcat('অন্যান্য')"><span>📦</span>অন্যান্য</a>
-  </div>
- </section>
-
- <section class="section" id="products">
-  <div class="sectionhead"><h2 id="heading">Just For You</h2><a href="#home" onclick="reset()">Back to top ↑</a></div>
-  <div class="deals" id="all"></div>
- </section>
-
- <section class="cartbox" id="cart">
-  <h2>🛒 Shopping Cart</h2>
-  <div id="items">আপনার কার্ট খালি।</div>
-  <h3>মোট: ৳<span id="total">0</span></h3>
-  <a class="collect" href="#checkout">Checkout</a>
- </section>
-
- <section class="cartbox" id="checkout">
-  <h2>অর্ডার দিন</h2>
-  <p>আপনার তথ্য পূরণ করুন।</p>
-  <form onsubmit="order(event)">
-   <label>নাম</label><input class="field" id="customer" required>
-   <label>মোবাইল নম্বর</label><input class="field" id="phone" type="tel" required>
-   <label>সম্পূর্ণ ঠিকানা</label><input class="field" id="address" required>
-   <button class="collect" type="submit">WhatsApp-এ অর্ডার</button>
-  </form>
-  <p id="message"></p>
- </section>
-</main>
-
-<footer>
- <h3>MS Kajol Enterprise</h3>
- <p>আপনার বিশ্বস্ত অনলাইন শপ</p>
- <p>© 2026 MS Kajol Enterprise</p>
-</footer>
-
-<nav class="bottom">
- <a href="#home"><span>⌂</span>For You</a>
- <a href="#categories"><span>▦</span>Categories</a>
- <a href="#products"><span>♡</span>Discover</a>
- <a href="#cart"><span>🛒</span>Cart</a>
- <a href="#checkout"><span>♙</span>Account</a>
-</nav>
-
+<div class="layout">
+ <aside class="sidebar" id="sidebar"></aside>
+ <main class="content">
+  <div class="quickcats" id="quickcats"></div>
+  <div class="grid" id="products"></div>
+  <div class="section-title"><strong>সম্প্রতি দেখা পণ্য</strong><button onclick="window.scrollTo({top:0,behavior:'smooth'})">সব দেখুন →</button></div>
+  <div class="recent" id="recent"></div>
+ </main>
+</div>
+<div class="notice">ডেমো ডিজাইন: এখানে দেখানো পণ্য, ছবি ও দাম উদাহরণমাত্র। দোকানের আসল পণ্য যোগ করার পরেই অর্ডার চালু করা উচিত।</div>
+<nav class="bottomnav"><button class="sel" onclick="window.scrollTo({top:0,behavior:'smooth'})"><b>⌂</b>হোম</button><button onclick="document.querySelector('.sidebar')?.scrollIntoView()"><b>▦</b>ক্যাটাগরি</button><button onclick="document.getElementById('search').focus()"><b>⌕</b>সার্চ</button><button onclick="alert('Wishlist setup comes next.')"><b>♡</b>পছন্দের তালিকা</button><button onclick="showCart()"><b>🛒</b>কার্ট</button></nav>
 <script>
+const categories=[
+['▦','সব পণ্য'],['▱','ইলেকট্রনিক্স'],['▯','মোবাইল ও এক্সেসরিজ'],['▣','কম্পিউটার ও গ্যাজেট'],['♧','গৃহস্থালি পণ্য'],['♧','ফ্যাশন ও পোশাক'],['♧','বিউটি ও পার্সোনাল কেয়ার'],['⚽','খেলাধুলা ও আউটডোর'],['▤','বই ও স্টেশনারি'],['♜','খাবার ও পানীয়'],['♧','অন্যান্য']];
 const products=[
- {id:1,n:"LED বাল্ব",c:"ইলেকট্রিক",p:150,o:200,e:"💡"},
- {id:2,n:"ইলেকট্রিক মাল্টিপ্লাগ",c:"ইলেকট্রিক",p:250,o:320,e:"🔌"},
- {id:3,n:"LED লাইট",c:"ইলেকট্রিক",p:100,o:140,e:"🔆"},
- {id:4,n:"মোবাইল চার্জার",c:"মোবাইল",p:350,o:450,e:"🔋"},
- {id:5,n:"USB ডাটা কেবল",c:"মোবাইল",p:120,o:180,e:"🔗"},
- {id:6,n:"হেডফোন",c:"মোবাইল",p:250,o:350,e:"🎧"},
- {id:7,n:"দেয়াল ঘড়ি",c:"হোম",p:450,o:550,e:"🕒"},
- {id:8,n:"পানির বোতল",c:"হোম",p:180,o:220,e:"🧴"},
- {id:9,n:"টর্চ লাইট",c:"ইলেকট্রিক",p:220,o:280,e:"🔦"},
- {id:10,n:"ছোট ফ্যান",c:"হোম",p:650,o:800,e:"🪭"},
- {id:11,n:"স্ক্রু ড্রাইভার সেট",c:"অন্যান্য",p:200,o:260,e:"🪛"},
- {id:12,n:"এক্সটেনশন বোর্ড",c:"ইলেকট্রিক",p:400,o:500,e:"🔌"},
- {id:13,n:"মোবাইল স্ট্যান্ড",c:"মোবাইল",p:100,o:150,e:"📱"},
- {id:14,n:"স্টোরেজ বক্স",c:"হোম",p:300,o:400,e:"📦"},
- {id:15,n:"অন্যান্য প্রয়োজনীয় পণ্য",c:"অন্যান্য",p:100,o:150,e:"🎁"}
-];
-let cart={},category="";
-function card(p){
- return `<article class="card">
-  <div class="pic">${p.e}</div>
-  <div class="details">
-   <div class="name">${p.n}</div>
-   <div class="price">৳${p.p}<span class="old"> ৳${p.o}</span></div>
-   <div class="discount">-${Math.round((p.o-p.p)*100/p.o)}%</div>
-   <button class="add" onclick="add(${p.id})">Add to Cart</button>
-  </div>
- </article>`;
-}
-function render(){
- let q=document.getElementById("q").value.trim().toLowerCase();
- let list=products.filter(p=>(!category||p.c===category)&&p.n.toLowerCase().includes(q));
- document.getElementById("all").innerHTML=list.map(card).join("")||"<p>কোনো পণ্য পাওয়া যায়নি।</p>";
- document.getElementById("heading").textContent=category||q?"Search Results":"Just For You";
-}
-function setcat(c){
- category=c;
- document.getElementById("q").value="";
- render();
-}
-function reset(){category="";document.getElementById("q").value="";render();}
-function add(id){cart[id]=(cart[id]||0)+1;renderCart();}
-function qty(id,n){cart[id]=(cart[id]||0)+n;if(cart[id]<=0)delete cart[id];renderCart();}
-function removeItem(id){delete cart[id];renderCart();}
-function renderCart(){
- let total=0,count=0,html="";
- for(let id in cart){
-  let p=products.find(x=>x.id==id),n=cart[id];
-  total+=p.p*n;count+=n;
-  html+=`<div class="cartrow"><div>${p.e} ${p.n}<br>৳${p.p} × ${n}</div>
-  <div><button onclick="qty(${id},-1)">−</button> ${n} <button onclick="qty(${id},1)">+</button> <button onclick="removeItem(${id})">🗑</button></div></div>`;
- }
- document.getElementById("items").innerHTML=html||"আপনার কার্ট খালি।";
- document.getElementById("total").textContent=total;
- document.getElementById("count").textContent=count;
-}
-function order(e){
- e.preventDefault();
- if(!Object.keys(cart).length){alert("আগে কার্টে পণ্য যোগ করুন।");return;}
- let name=document.getElementById("customer").value;
- let phone=document.getElementById("phone").value;
- let address=document.getElementById("address").value;
- let list=Object.keys(cart).map(id=>{
-  let p=products.find(x=>x.id==id);return p.n+" x "+cart[id]+" = ৳"+p.p*cart[id];
- }).join("\n");
- let total=Object.keys(cart).reduce((s,id)=>s+products.find(x=>x.id==id).p*cart[id],0);
- let msg="MS Kajol Enterprise Order\nName: "+name+"\nPhone: "+phone+"\nAddress: "+address+"\n\n"+list+"\nTotal: ৳"+total;
- const whatsapp="8801XXXXXXXXX";
- if(whatsapp.includes("X")){
-  document.getElementById("message").textContent="WhatsApp অর্ডার চালু করতে কোডে দোকানের আসল WhatsApp নম্বর বসাতে হবে।";
-  alert(msg);return;
- }
- window.open("https://wa.me/"+whatsapp+"?text="+encodeURIComponent(msg),"_blank");
-}
-document.getElementById("flash").innerHTML=products.slice(0,3).map(card).join("");
-document.getElementById("daily").innerHTML=products.slice(3,9).map(card).join("");
-render();
-renderCart();
+['📱','Redmi Note 13 (8GB/256GB)','স্মার্টফোন',24990,'মোবাইল ও এক্সেসরিজ'],
+['🎧','TWS Wireless Earbuds','ব্লুটুথ ইয়ারফোন',1250,'ইলেকট্রনিক্স'],
+['💻','Acer Aspire 3','ল্যাপটপ',42500,'কম্পিউটার ও গ্যাজেট'],
+['⌚','T800 Smart Watch','স্মার্টওয়াচ',1050,'মোবাইল ও এক্সেসরিজ'],
+['🌀','Vision Stand Fan','স্ট্যান্ড ফ্যান',3200,'ইলেকট্রনিক্স'],
+['🎒','Laptop Backpack','ব্যাকপ্যাক',1450,'ফ্যাশন ও পোশাক'],
+['👟','Men’s Sports Shoes','স্পোর্টস জুতা',2150,'ফ্যাশন ও পোশাক'],
+['👕','Polo T-Shirt','পোলো টি-শার্ট',650,'ফ্যাশন ও পোশাক'],
+['🍟','Air Fryer 4.5L','এয়ার ফ্রায়ার',7850,'গৃহস্থালি পণ্য'],
+['🍚','Rice Cooker 1.8L','রাইস কুকার',3450,'গৃহস্থালি পণ্য'],
+['🧴','Skin Care Set','স্কিন কেয়ার সেট',1850,'বিউটি ও পার্সোনাল কেয়ার'],
+['🍲','Stainless Steel Cookware','কুকওয়্যার সেট',2750,'গৃহস্থালি পণ্য']];
+let active='সব পণ্য',cart=[];
+const money=n=>'৳ '+n.toLocaleString('en-US');
+function drawCats(){document.getElementById('sidebar').innerHTML=categories.map((c,i)=>`<button class="cat ${i===0?'active':''}" onclick="filterCat('${c[1]}',this)"><span>${c[0]}</span><span>${c[1]}</span><span class="arrow">›</span></button>`).join('');document.getElementById('quickcats').innerHTML=[['📱','মোবাইল'],['🎧','ইয়ারফোন'],['💻','ল্যাপটপ'],['⌚','স্মার্টওয়াচ'],['🌀','ফ্যান'],['🎒','ব্যাকপ্যাক']].map(c=>`<button class="quick" onclick="document.getElementById('search').value='${c[1]}';render()"><div class="pic">${c[0]}</div><strong>${c[1]}</strong></button>`).join('')}
+function render(){let q=document.getElementById('search').value.toLowerCase();let shown=products.filter(p=>(active==='সব পণ্য'||p[4]===active)&&(p[1]+' '+p[2]+' '+p[4]).toLowerCase().includes(q));document.getElementById('products').innerHTML=shown.map((p)=>`<article class="product"><div class="product-img">${p[0]}<button class="heart" onclick="this.textContent=this.textContent==='♡'?'♥':'♡'">♡</button></div><div class="pbody"><div class="pname">${p[1]}</div><div class="sub">${p[2]}</div><div class="price-row"><span class="price">${money(p[3])}</span><button class="add" onclick="addCart('${p[1]}',${p[3]})" title="Add to cart">🛒</button></div></div></article>`).join('')||'<p>কোনো পণ্য পাওয়া যায়নি।</p>';document.getElementById('recent').innerHTML=products.slice(0,7).map(p=>`<div class="recent-card" title="${p[1]}">${p[0]}</div>`).join('')}
+function filterCat(c,el){active=c;document.querySelectorAll('.cat').forEach(x=>x.classList.remove('active'));if(el)el.classList.add('active');render()}
+function addCart(n,p){cart.push({n,p});document.getElementById('cartCount').textContent=cart.length}
+function showCart(){if(!cart.length){alert('আপনার কার্ট খালি।');return}alert('কার্টে '+cart.length+'টি পণ্য আছে। মোট: '+money(cart.reduce((s,p)=>s+p.p,0))+'\nপরবর্তী ধাপে নিরাপদ checkout যুক্ত হবে।')}
+document.getElementById('search').addEventListener('input',render);drawCats();render();
 </script>
-</body>
-</html>
+</body></html>
