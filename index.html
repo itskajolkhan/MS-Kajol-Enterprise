@@ -1,58 +1,61 @@
-<!doctype html>
-<html lang="bn">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MS Kajol Enterprise — Quality Products, Better Life</title>
-<style>
-:root{--navy:#101c2b;--gold:#ffc83d;--line:#e7e9ed;--muted:#69717d;--bg:#f7f8fa}
-*{box-sizing:border-box}body{margin:0;background:#fff;color:#141a22;font:15px Arial,"Noto Sans Bengali",sans-serif}
-button,input{font:inherit}button{cursor:pointer}.top{height:88px;background:var(--navy);color:#fff;display:flex;align-items:center;gap:24px;padding:14px 3%;position:sticky;top:0;z-index:5}
-.brand{display:flex;align-items:center;gap:12px;min-width:310px}.logo{font-size:34px;font-weight:900;color:var(--gold);letter-spacing:-5px;margin-right:5px}.brand strong{font-size:20px;display:block}.brand small{color:#c8d0d9;display:block;margin-top:5px}.search{flex:1;max-width:570px;position:relative}.search input{width:100%;border:0;border-radius:28px;padding:16px 22px 16px 52px;background:#fff;color:#222;outline:none}.search:before{content:"⌕";position:absolute;left:20px;top:8px;color:#45505c;font-size:28px}.topicons{display:flex;gap:24px;align-items:center;font-size:27px}.topicons button{background:none;border:0;color:white;position:relative}.count{position:absolute;right:-7px;top:-7px;background:var(--gold);color:#111;border-radius:50%;font-size:11px;min-width:19px;height:19px;display:grid;place-items:center}
-.layout{display:grid;grid-template-columns:230px minmax(0,1fr);gap:22px;padding:22px 20px 0}.sidebar{border:1px solid var(--line);border-radius:16px;overflow:hidden;min-height:860px}.cat{display:flex;align-items:center;gap:14px;padding:13px 17px;border:0;background:white;width:100%;text-align:left;font-size:14px;color:#303640}.cat span:first-child{font-size:20px;width:25px;text-align:center}.cat.active{background:#fff2ce;font-weight:700}.cat:hover{background:#fff7e4}.cat .arrow{margin-left:auto;color:#8b929a}.content{min-width:0}.quickcats{display:flex;gap:18px;overflow-x:auto;padding:4px 2px 28px;scrollbar-width:thin}.quick{border:0;background:white;min-width:92px;text-align:center;color:#171c23}.quick .pic{width:90px;height:90px;border:1px solid #edf0f3;border-radius:25px;background:#f6f7f9;display:grid;place-items:center;font-size:46px;margin:auto auto 9px}.quick strong{font-size:14px;font-weight:600}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.product{border:1px solid var(--line);border-radius:17px;overflow:hidden;position:relative;background:white;min-width:0}.product-img{height:180px;background:linear-gradient(145deg,#f7f8fa,#eef1f4);display:grid;place-items:center;font-size:82px;position:relative}.heart{position:absolute;right:9px;top:9px;border:0;background:#fff;border-radius:50%;width:29px;height:29px;font-size:17px}.pbody{padding:12px 11px 14px}.pname{font-size:13px;line-height:1.4;min-height:35px}.sub{color:var(--muted);font-size:12px;margin-top:3px;min-height:17px}.price-row{display:flex;align-items:center;justify-content:space-between;gap:5px;margin-top:17px}.price{font-size:16px;font-weight:700}.add{border:0;border-radius:9px;background:var(--gold);height:34px;width:36px;font-size:19px}.section-title{display:flex;align-items:center;justify-content:space-between;margin:38px 0 16px;font-size:21px}.section-title button{border:0;background:white;font-size:14px}.recent{display:flex;gap:14px;overflow:auto;padding-bottom:16px}.recent-card{min-width:120px;height:110px;border:1px solid var(--line);border-radius:14px;background:#fafbfc;display:grid;place-items:center;font-size:45px}.bottomnav{display:none}.notice{margin:15px 20px;color:#7a5a00;background:#fff7df;padding:10px 13px;border-radius:9px;font-size:12px}
-@media(max-width:900px){.top{height:auto;min-height:76px;gap:12px;padding:12px 14px;flex-wrap:wrap}.brand{min-width:0;flex:1}.brand strong{font-size:15px}.brand small{font-size:11px}.logo{font-size:27px}.search{order:3;max-width:none;flex-basis:100%}.topicons{gap:13px;font-size:23px}.layout{grid-template-columns:1fr;padding:12px 12px 80px}.sidebar{display:none}.quickcats{gap:13px;padding-bottom:18px}.quick{min-width:78px}.quick .pic{width:72px;height:72px;font-size:36px;border-radius:20px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.product-img{height:150px;font-size:67px}.pbody{padding:10px}.price{font-size:14px}.section-title{font-size:18px;margin-top:27px}.bottomnav{display:flex;position:fixed;bottom:0;left:0;right:0;z-index:6;background:#fff;border-top:1px solid var(--line);justify-content:space-around;padding:9px 3px calc(9px + env(safe-area-inset-bottom));box-shadow:0 -3px 14px #00000008}.bottomnav button{border:0;background:none;color:#69717d;font-size:11px;display:flex;flex-direction:column;align-items:center;gap:4px}.bottomnav b{font-size:22px;font-weight:400}.bottomnav .sel{color:#d69b00}.notice{margin:0 12px 12px}}
-@media(min-width:901px) and (max-width:1150px){.layout{grid-template-columns:200px minmax(0,1fr);gap:15px;padding:16px}.grid{gap:10px}.product-img{height:150px}.brand{min-width:260px}.top{gap:15px}.topicons{gap:15px}}
-</style>
-</head>
-<body>
-<header class="top">
- <div class="brand"><div class="logo">MK</div><div><strong>MS KAJOL ENTERPRISE</strong><small>Quality Products • Better Life</small></div></div>
- <div class="search"><input id="search" placeholder="পণ্য খুঁজুন..." aria-label="Search products"></div>
- <div class="topicons"><button title="Account" onclick="alert('Account setup will be connected in the next setup step.')">♙</button><button title="Wishlist" onclick="alert('Your wishlist is ready for account integration.')">♡<span class="count">0</span></button><button title="Cart" onclick="showCart()">🛒<span class="count" id="cartCount">0</span></button></div>
-</header>
-<div class="layout">
- <aside class="sidebar" id="sidebar"></aside>
- <main class="content">
-  <div class="quickcats" id="quickcats"></div>
-  <div class="grid" id="products"></div>
-  <div class="section-title"><strong>সম্প্রতি দেখা পণ্য</strong><button onclick="window.scrollTo({top:0,behavior:'smooth'})">সব দেখুন →</button></div>
-  <div class="recent" id="recent"></div>
- </main>
-</div>
-<div class="notice">ডেমো ডিজাইন: এখানে দেখানো পণ্য, ছবি ও দাম উদাহরণমাত্র। দোকানের আসল পণ্য যোগ করার পরেই অর্ডার চালু করা উচিত।</div>
-<nav class="bottomnav"><button class="sel" onclick="window.scrollTo({top:0,behavior:'smooth'})"><b>⌂</b>হোম</button><button onclick="document.querySelector('.sidebar')?.scrollIntoView()"><b>▦</b>ক্যাটাগরি</button><button onclick="document.getElementById('search').focus()"><b>⌕</b>সার্চ</button><button onclick="alert('Wishlist setup comes next.')"><b>♡</b>পছন্দের তালিকা</button><button onclick="showCart()"><b>🛒</b>কার্ট</button></nav>
-<script>
-const categories=[
-['▦','সব পণ্য'],['▱','ইলেকট্রনিক্স'],['▯','মোবাইল ও এক্সেসরিজ'],['▣','কম্পিউটার ও গ্যাজেট'],['♧','গৃহস্থালি পণ্য'],['♧','ফ্যাশন ও পোশাক'],['♧','বিউটি ও পার্সোনাল কেয়ার'],['⚽','খেলাধুলা ও আউটডোর'],['▤','বই ও স্টেশনারি'],['♜','খাবার ও পানীয়'],['♧','অন্যান্য']];
-const products=[
-['📱','Redmi Note 13 (8GB/256GB)','স্মার্টফোন',24990,'মোবাইল ও এক্সেসরিজ'],
-['🎧','TWS Wireless Earbuds','ব্লুটুথ ইয়ারফোন',1250,'ইলেকট্রনিক্স'],
-['💻','Acer Aspire 3','ল্যাপটপ',42500,'কম্পিউটার ও গ্যাজেট'],
-['⌚','T800 Smart Watch','স্মার্টওয়াচ',1050,'মোবাইল ও এক্সেসরিজ'],
-['🌀','Vision Stand Fan','স্ট্যান্ড ফ্যান',3200,'ইলেকট্রনিক্স'],
-['🎒','Laptop Backpack','ব্যাকপ্যাক',1450,'ফ্যাশন ও পোশাক'],
-['👟','Men’s Sports Shoes','স্পোর্টস জুতা',2150,'ফ্যাশন ও পোশাক'],
-['👕','Polo T-Shirt','পোলো টি-শার্ট',650,'ফ্যাশন ও পোশাক'],
-['🍟','Air Fryer 4.5L','এয়ার ফ্রায়ার',7850,'গৃহস্থালি পণ্য'],
-['🍚','Rice Cooker 1.8L','রাইস কুকার',3450,'গৃহস্থালি পণ্য'],
-['🧴','Skin Care Set','স্কিন কেয়ার সেট',1850,'বিউটি ও পার্সোনাল কেয়ার'],
-['🍲','Stainless Steel Cookware','কুকওয়্যার সেট',2750,'গৃহস্থালি পণ্য']];
-let active='সব পণ্য',cart=[];
-const money=n=>'৳ '+n.toLocaleString('en-US');
-function drawCats(){document.getElementById('sidebar').innerHTML=categories.map((c,i)=>`<button class="cat ${i===0?'active':''}" onclick="filterCat('${c[1]}',this)"><span>${c[0]}</span><span>${c[1]}</span><span class="arrow">›</span></button>`).join('');document.getElementById('quickcats').innerHTML=[['📱','মোবাইল'],['🎧','ইয়ারফোন'],['💻','ল্যাপটপ'],['⌚','স্মার্টওয়াচ'],['🌀','ফ্যান'],['🎒','ব্যাকপ্যাক']].map(c=>`<button class="quick" onclick="document.getElementById('search').value='${c[1]}';render()"><div class="pic">${c[0]}</div><strong>${c[1]}</strong></button>`).join('')}
-function render(){let q=document.getElementById('search').value.toLowerCase();let shown=products.filter(p=>(active==='সব পণ্য'||p[4]===active)&&(p[1]+' '+p[2]+' '+p[4]).toLowerCase().includes(q));document.getElementById('products').innerHTML=shown.map((p)=>`<article class="product"><div class="product-img">${p[0]}<button class="heart" onclick="this.textContent=this.textContent==='♡'?'♥':'♡'">♡</button></div><div class="pbody"><div class="pname">${p[1]}</div><div class="sub">${p[2]}</div><div class="price-row"><span class="price">${money(p[3])}</span><button class="add" onclick="addCart('${p[1]}',${p[3]})" title="Add to cart">🛒</button></div></div></article>`).join('')||'<p>কোনো পণ্য পাওয়া যায়নি।</p>';document.getElementById('recent').innerHTML=products.slice(0,7).map(p=>`<div class="recent-card" title="${p[1]}">${p[0]}</div>`).join('')}
-function filterCat(c,el){active=c;document.querySelectorAll('.cat').forEach(x=>x.classList.remove('active'));if(el)el.classList.add('active');render()}
-function addCart(n,p){cart.push({n,p});document.getElementById('cartCount').textContent=cart.length}
-function showCart(){if(!cart.length){alert('আপনার কার্ট খালি।');return}alert('কার্টে '+cart.length+'টি পণ্য আছে। মোট: '+money(cart.reduce((s,p)=>s+p.p,0))+'\nপরবর্তী ধাপে নিরাপদ checkout যুক্ত হবে।')}
-document.getElementById('search').addEventListener('input',render);drawCats();render();
-</script>
-</body></html>
+== Theme: Just Store ==
+Contributors: ThemeHunk
+Tags: e-commerce, blog, grid-layout, one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-header, custom-logo, custom-menu, add_editor_style, featured-image-header, featured-images, footer-widgets, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready.
+Requires at least: WordPress 5.0
+Requires PHP: 5.6
+Tested up to: 6.6
+Stable tag: 1.0.0
+License: GPLv3 or later
+License URL: https://www.gnu.org/licenses/gpl-3.0.en.html
+
+"Just Store is a child theme of Top Store WordPress theme" By themehunk
+
+
+== Description ==
+Just Store presents a dynamic and responsive eCommerce WordPress theme, tailor-made for eStore websites. The theme is intricately linked with the WooCommerce plugin, allowing for seamless online product sales. Perfect for a range of websites such as electronics, food, home appliances, gadget stores, jewelry shops, fashion outlets, furniture stores, grocery stores, clothing retailers, and decorative shops.
+
+For more information about Theme https://www.themehunk.com
+
+== Frequently Asked Questions ==
+
+= Does your theme support builder =
+Yes our theme supports builder
+
+= Can i use your theme with latest version of WordPress=
+Yes, this theme is tested with latest version of WordPress, you can use it for your site.
+
+
+== Resources ==
+== Screenshots ==
+1. Image used in Screenshots.
+Image Name: screenshot.png
+https://stocksnap.io/photo/iphone-airpods-UHGLILBFLV
+https://stocksnap.io/photo/headphones-music-5I3WI6Q1E0
+https://stocksnap.io/photo/microphone-audio-IQVHQYS3GL
+https://stocksnap.io/photo/iphone-marble-VAZ7FDIJG7
+https://stocksnap.io/photo/camera-top-JJVOI7MQZM
+https://stocksnap.io/photo/smart-watch-HN5PDS7HLL
+https://stocksnap.io/photo/laptop-computer-ARKITT7DVA
+https://stocksnap.io/photo/gold-watch-WIF2X48TBC
+https://stocksnap.io/photo/drone-camera-FSMS59M93R
+https://stocksnap.io/photo/business-man-A92FDFKT0F
+
+== Theme License & Copyright ==
+Just Store is distributed under the terms of the GNU GPL
+just-store-Copyright 2024, themehunk.com
+License : GPLv3 or later
+License URL: https://www.gnu.org/licenses/gpl-3.0.en.html
+
+
+==  Other Licenses ==
+Other js files are self coded.
+
+== Changelog ==
+
+= 1.0.0 =
+* Released
+
+== Upgrade Notice ==
+
+
+Once again, thank you so much for trying the Just Store WordPress Theme. We will be glad to help you. If you have any questions related to this theme then do let us know & we will try our best to assist. If you have any general questions related to the themes on ThemeHunk, we would recommend you to visit the ThemeHunk Support Forum and ask your queries there.
